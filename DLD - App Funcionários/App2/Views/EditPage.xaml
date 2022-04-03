@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Shell.NavBarIsVisible="False"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.EditPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="0"
+                Margin="0,0,0,15"/>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="0"
+                CornerRadius="15"/>
+        <Image Source="dld_logo.png"
+                     BackgroundColor="#FFCC00"
+                     Margin="80,20,80,20"
+                     Grid.Column="0"/>
+        <ScrollView Grid.Row="1" Grid.RowSpan="2">
+            <StackLayout Orientation="Vertical" Padding="0,0,0,0" Spacing="10">
+                <ListView x:Name="listView" ItemTapped="OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="3"
+                Margin="0,175,0,0"/>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="3"
+                Margin="0,160,0,0"
+                CornerRadius="15"/>
+        <ImageButton x:Name="addBtn" Grid.Row="3"
+                     Margin="0, 160, 262, 0"
+                     BackgroundColor="#FFCC00"
+                     Source="add_ico.png"
+                     Padding="15"
+                     CornerRadius="15"
+                     Clicked="addBtn_Clicked"></ImageButton>
+        <ImageButton x:Name="accBtn" Grid.Row="3"
+                     Margin="262, 160, 0, 0"
+                     BackgroundColor="#FFCC00"
+                     Source="acc_ico.png"
+                     Padding="15"
+                     CornerRadius="15"
+                     Clicked="accBtn_Clicked"></ImageButton>
+        <ImageButton x:Name="editBtn" Grid.Row="3"
+                     Margin="132, 160, 132, 0"
+                     BackgroundColor="#FFCC00"
+                     Source="edit_ico.png"
+                     Padding="15"
+                     CornerRadius="15"></ImageButton>
+    </Grid>
+
+</ContentPage>

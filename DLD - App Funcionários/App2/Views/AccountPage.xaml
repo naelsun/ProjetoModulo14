@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Shell.NavBarIsVisible="False"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.AccountPage">
+
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="0"
+                Margin="0,0,0,15"/>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="0"
+                CornerRadius="15"/>
+        <Image Source="dld_logo.png"
+                     BackgroundColor="#FFCC00"
+                     Margin="80,20,80,20"
+                     Grid.Column="0"/>
+        <ScrollView Grid.Row="1" Grid.RowSpan="2">
+            <StackLayout Orientation="Vertical" Spacing="10" Margin="0,40,0,0">
+                <Label x:Name="lblAcc" Text="Account" Margin="45,140,0,0" FontSize="30"/>
+                <Entry
+                    Margin="45,10,45,0"
+                    x:Name="entEmail"
+                    Placeholder="Email"/>
+                <Entry
+                    Margin="45,10,45,0"
+                    x:Name="entPass"
+                    Placeholder="Password"
+                    IsPassword="True"/>
+                <Button x:Name="btnLogin" Margin="120,20,120,0" Text="Login"
+                        BackgroundColor="#FFCED1"
+                        TextColor="#DA000D"
+                        BorderWidth="2"
+                        BorderColor="#DA000D"
+                        CornerRadius="15"
+                        Clicked="btnLogin_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,54 @@
+html {
+  font-family: 'DM Sans';
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.nav-font {
+  font-family: 'DM Sans';
+  font-size: 16px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'DM Sans';
+  margin-bottom: 60px;
+}
+
+.tracking-button {
+    background-color: #FFCC00;
+    height: 48px;
+    width: 48px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.tracking-input {
+    border-color: lightgray;
+    height: 48px;
+    width: 300px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.div1 {
+    margin-left: 482px;
+    float: left;
+}
+
+.div2 {
+    float: left;
+}
+
+.table-padding {
+    padding: 300px;
+}

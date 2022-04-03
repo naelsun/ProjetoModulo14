@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.LoggedPage">
+    
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="0"
+                Margin="0,0,0,15"/>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="0"
+                CornerRadius="15"/>
+        <Image Source="dld_logo.png"
+                     BackgroundColor="#FFCC00"
+                     Margin="80,20,80,20"
+                     Grid.Column="0"/>
+        <ScrollView Grid.Row="1" Grid.RowSpan="2">
+            <StackLayout Orientation="Vertical" Padding="0,0,0,0" Spacing="10">
+                <Label Text="Account Info" Margin="45,50,0,0" FontSize="30"/>
+                <Label Text="Name" Margin="45,20,0,0" FontSize="22"/>
+                <Label x:Name="txtName" Text="name" Margin="45,5,0,0" FontSize="18"/>
+                <Label Text="Email" Margin="45,20,0,0" FontSize="22"/>
+                <Label x:Name="txtEmail" Text="email" Margin="45,5,0,0" FontSize="18"/>
+                <Button x:Name="btnPassword" Margin="0,5,160,0" Text="Change Password"
+                        BackgroundColor="#fafafa"
+                        TextColor="#747474"
+                        Clicked="btnPassword_Clicked"/>
+                <Button x:Name="btnLogout" Margin="0,0,235,0" Text="Logout"
+                        BackgroundColor="#fafafa"
+                        TextColor="#DA000D"
+                        Clicked="btnLogout_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="3"
+                Margin="0,175,0,0"/>
+        <BoxView BackgroundColor="#FFCC00"
+                Grid.Column="0"
+                Grid.Row="3"
+                Margin="0,160,0,0"
+                CornerRadius="15"/>
+        <ImageButton x:Name="addBtn" Grid.Row="3"
+                     Margin="0, 160, 262, 0"
+                     BackgroundColor="#FFCC00"
+                     Source="add_ico.png"
+                     Padding="15"
+                     CornerRadius="15"
+                     Clicked="addBtn_Clicked"></ImageButton>
+        <ImageButton x:Name="accBtn" Grid.Row="3"
+                     Margin="262, 160, 0, 0"
+                     BackgroundColor="#FFCC00"
+                     Source="acc_ico.png"
+                     Padding="15"
+                     CornerRadius="15"></ImageButton>
+        <ImageButton x:Name="editBtn" Grid.Row="3"
+                     Margin="132, 160, 132, 0"
+                     BackgroundColor="#FFCC00"
+                     Source="edit_ico.png"
+                     Padding="15"
+                     CornerRadius="15"
+                     Clicked="editBtn_Clicked"></ImageButton>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿@page
+@using EmpresaEntregas.Controllers;
+@using EmpresaEntregas.Models;
+@model EmpresaEntregas.Pages.TrackingModel
+@{
+    ViewData["Title"] = "Tracking";
+    var query = Request.Query;
+    string nencomenda = query["encomenda"];
+    string func = "", destino = "", estado = "";
+
+    DBController dBController = new DBController();
+
+    foreach (Encomendas encomenda in dBController.GetEncomendas())
+    {
+        if (encomenda.nencomenda == nencomenda)
+        {
+            foreach (Funcionarios funcionario in dBController.GetFuncionarios())
+            {
+                if (encomenda.nfunc == funcionario.nfunc)
+                {
+                    func = funcionario.nome;
+                }
+            }
+            destino = encomenda.destino;
+            estado = encomenda.estado;
+        }
+    }
+}
+<div class="text-center"><br/><br/>
+    <h1 class="display-4">Tracking</h1><br/>
+    <br/><br/><br/><br/><table width="60%" align="center">
+    <tr>
+        <th>Número</th>
+        <th>Funcionário</th>
+        <th>Destino</th>
+        <th>Estado</th>
+    </tr>
+    <tr>
+        <td>@nencomenda</td>
+        <td>@func</td>
+        <td>@destino</td>
+        <td>@estado</td>
+      </tr>
+    </table>
+</div>
